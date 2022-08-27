@@ -1,0 +1,364 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #191919;
+  color: #fff;
+  width: 100%;
+  height: 100vh;
+}
+
+.start_btn,
+.info_container,
+.quiz_container,
+.result_box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+  box-shadow: -3px -3px 5px #00000090, 3px 3px 15px #00000090;
+}
+
+/* Start Button Styling*/
+.start_btn button {
+  background-color: #000000;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.5rem;
+  padding: 1rem 3rem;
+  border-radius: 5px;
+}
+
+.info_container {
+  opacity: 0;
+  background-color: #000000;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.9);
+  height: 11rem;
+  width: 20rem;
+  max-width: 40rem;
+  border-radius: 5px;
+}
+
+.rules_tittle {
+  font-weight: 600;
+  width: 100%;
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 2rem;
+  font-size: 20px;
+}
+
+.info_list {
+  padding: 0.5rem 1rem;
+  list-style: none;
+  margin-top: 5px;
+}
+.info {
+  margin: 5px 0;
+}
+
+.info .info_span {
+  color: #4799c5;
+  font-weight: 600;
+}
+
+.exit_continue_btn {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1.2rem 2rem;
+  border-top: 1px solid lightgrey;
+}
+
+.exit_btn,
+.continue_btn {
+  padding: 3px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 600;
+  outline: none;
+  background-color: #0f0f0f;
+  color: #ffffff;
+
+  /* box-shadow: -3px -3px 5px #000000, 3px 3px 15px #000000; */
+}
+.continue_btn {
+  border: 2px #4799c5 solid;
+  color: #4799c5;
+}
+.continue_btn:hover {
+  background-color: #9dd6e0;
+  color: #000000;
+  transition: all 0.8s ease;
+}
+.exit_btn {
+  border: 2px #464646 solid;
+}
+.exit_btn:hover {
+  background-color: #bcb2b2;
+  color: #000000;
+  transition: all 0.8s ease;
+}
+
+/*==Quiz Container==*/
+.quiz_container {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.9);
+  height: 20rem;
+  width: 20rem;
+  max-width: 40rem;
+  background-color: #000000;
+
+  border-radius: 5px;
+}
+
+.quiz_header {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  height: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 1px;
+  border-bottom: 1px solid lightgrey;
+}
+.quiz_tittle {
+  align-self: center;
+  padding: 0.5rem 1rem;
+}
+.counter_time {
+  margin-right: 5px;
+  background-color: #2f5d59;
+  color: #000000;
+  font-weight: 600;
+  width: 8rem;
+  height: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  user-select: none;
+  padding: 0rem 0.3rem;
+  border-radius: 5px;
+  align-self: center;
+}
+.counter_time_text {
+  font-size: 18px;
+}
+.counter_time_num {
+  background-color: black;
+  padding: 0.3rem 0.8rem;
+  border-radius: 5px;
+  color: #ffffff;
+}
+/*==Quix Box Section==*/
+section {
+  padding: 5px 10px;
+}
+
+.que_text {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.option_list {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 10px 0;
+  display: block;
+}
+
+.option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid lightblue;
+  border-radius: 5px;
+  padding: 4px 10px;
+  margin-bottom: 10px;
+}
+
+.option:hover {
+  color: #004085;
+  background-color: #cce5ff;
+  border-color: #b8daff;
+}
+.option:last-child {
+  margin-bottom: 0px;
+}
+
+.correct {
+  color: #000;
+  background-color: aquamarine;
+}
+.wrong {
+  color: #000;
+  background-color: pink;
+}
+.selectNone {
+  pointer-events: none;
+}
+
+.optionCorrect {
+  color: #155724;
+  background-color: aquamarine;
+}
+
+/*===Footer quiz===*/
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 30px;
+  width: 100%;
+  padding: 0 5px;
+}
+
+.total_que span {
+  display: flex;
+  user-select: none;
+}
+
+.total_que span p {
+  font-weight: 500;
+  padding: 0 5px;
+}
+
+.next_btn {
+  display: none;
+  /* height: 20px; */
+  padding: 3px 10px;
+  border-radius: 5px;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border: 2px #4799c5 solid;
+  color: #4799c5;
+  background-color: #000000;
+}
+
+.next_btn:hover {
+  background-color: #9dd6e0;
+  color: #000000;
+}
+
+/*==Result Box==*/
+.result_box {
+  pointer-events: none;
+  width: 20rem;
+  max-width: 40rem;
+  background-color: #000000;
+  border-radius: 5px;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 14px;
+}
+
+.logo {
+  font-size: 5rem;
+}
+
+.complete_text {
+  padding: 0 14px;
+  margin-top: 5px;
+  text-align: center;
+}
+.score_text {
+  display: flex;
+  justify-content: center;
+  padding: 0 10px;
+  width: 100%;
+}
+
+.score_text span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.score_text span p {
+  font-weight: 500;
+  padding: 0 4px;
+}
+
+.result_box .buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 14px;
+}
+
+.restar,
+.quit {
+  font-weight: 600;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+.restar {
+  color: #ffffff;
+  background-color: #000000;
+  border: 2px #464646 solid;
+}
+.restar:hover {
+  background-color: #bcb2b2;
+  color: #000000;
+  transition: all 0.8s ease;
+}
+.quit {
+  background-color: #000000;
+  border: 2px #4799c5 solid;
+  color: #4799c5;
+}
+.quit:hover {
+  background-color: #9dd6e0;
+  color: #000000;
+  transition: all 0.8s ease;
+}
+/*.continue_btn {
+  border: 2px #4799c5 solid;
+  color: #4799c5;
+}
+.continue_btn:hover {
+  background-color: #9dd6e0;
+  color: #000000;
+  transition: all 0.8s ease;
+}
+.exit_btn {
+  border: 2px #464646 solid;
+}
+.exit_btn:hover {
+  background-color: #bcb2b2;
+  color: #000000;
+  transition: all 0.8s ease;
+} */
+
+/*===Remover and Adding Opacities===*/
+.hide {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.9);
+}
+.show,
+.quizShow {
+  opacity: 1;
+  z-index: 50;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}

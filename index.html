@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Questionary</title>
+  </head>
+  <body>
+    <!--Start Quiz Button-->
+    <div class="start_btn btn_start"><button>Start Quiz</button></div>
+
+    <!--Info Box-->
+    <div class="info_container">
+      <h1 class="rules_tittle">Quiz Rules</h1>
+
+      <ul class="info_list">
+        <li class="info">
+          1. You will have only <span class="info_span"> 20 seconds to finish</span>
+        </li>
+        <li class="info">2. Select only one option</li>
+        <li class="info">3. Enjoy!</li>
+      </ul>
+
+      <!--Btn Exit Quiz and Continue-->
+      <div class="exit_continue_btn btn">
+        <button class="exit_btn">Exit Quiz</button>
+        <button class="continue_btn">Continue</button>
+      </div>
+    </div>
+
+    <!--Quiz App-->
+    <form class="quiz_container">
+      <div class="quiz_header">
+        <h2 class="quiz_tittle">Citizen Test</h2>
+        <div class="counter_time">
+          <p class="counter_time_text">Time left</p>
+          <p class="counter_time_num">00</p>
+        </div>
+      </div>
+
+      <section>
+        <div class="que_text">
+          <!-- <span>Cuanto es 2 + 2</span> HIDDING TO SHOW WITH JS-->
+        </div>
+        <div class="option_list">
+          <!-- <div class="option">
+            <span>4</span>
+            <div class="icon tick">✅</div>
+          </div>
+          <div class="option">
+            <span>2</span>
+            <div class="icon cross">❌</div>
+          </div>
+          <div class="option">
+            <span>1</span>
+          </div>
+          <div class="option">
+            <span>5</span>
+          </div>
+        </div> -->
+      </section>
+
+      <!--Quiz Box Footer-->
+      <footer>
+        <div class="total_que">
+          <!-- <span
+            ><p>2</p>
+            of
+            <p>5</p>
+            Questions</span
+          > -->
+        </div>
+        <button class="next_btn">Next Que</button>
+      </footer>
+    </form>
+
+    <!--Reulst Box-->
+    <div class="result_box">
+      <div class="icon">
+        <p class="logo">👑</p>
+      </div>
+      <div class="complete_text">You've completed the Quiz!</div>
+      <div class="score_text">
+        <span class="result_text"
+          >Sorry, you got only
+          <p class="score">2</p>
+          out of
+          <p>4</p></span
+        >
+      </div>
+      <div class="buttons">
+        <button class="restar">Replay Quiz</button>
+        <button class="quit">Quit Quiz</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- <script src="questions.js"></script> -->
+  </body>
+</html>
